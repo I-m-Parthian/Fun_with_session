@@ -1,0 +1,8 @@
+<h1>Sign In</h1>
+<div class="form-group mt-3 mb-3">
+    <%= form_with url: sign_in_path do |form|  %>
+            <%= form.text_field :email, class: "form-control mb-3", placeholder: "Email Address"  %>
+            <%= form.password_field :password, class: "form-control mb-3", placeholder: "Password"  %>
+            <%= form.submit "Sign In", class: "btn btn-success"  %>
+    <% end  %>
+</div> 

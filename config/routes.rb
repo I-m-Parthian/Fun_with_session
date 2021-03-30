@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post "sign_up", to: "registrations#create"
 
   # routes for password resetting
-  get "password", to: "password#edit"
+  get "password", to: "password#edit", as: "edit_password"
   patch "password", to: "password#update"
 
   # routes for maintaining the user session
@@ -19,5 +19,8 @@ Rails.application.routes.draw do
   post "sign_in", to: "sessions#create"
 
   delete "logout", to: "sessions#destroy"
-  
+
+  # resetting the password
+  get "password/reset", to: "password_resets#new"
+  post "password/reset", to: "password_resets#create"
 end

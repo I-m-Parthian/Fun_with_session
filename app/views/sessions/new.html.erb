@@ -3,6 +3,7 @@
     <%= form_with url: sign_in_path do |form|  %>
             <%= form.text_field :email, class: "form-control mb-3", placeholder: "Email Address"  %>
             <%= form.password_field :password, class: "form-control mb-3", placeholder: "Password"  %>
-            <%= form.submit "Sign In", class: "btn btn-success"  %>
+            <%= link_to "Forgot your password?", password_reset_path%>
+            <div><%= form.submit "Sign In", class: "btn btn-success mt-3"  %></div>
     <% end  %>
 </div> 
